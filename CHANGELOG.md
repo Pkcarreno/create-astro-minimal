@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/Pkcarreno/create-astro-minimal/compare/v1.1.0...v1.2.0) (2026-01-14)
+
+
+### Features
+
+* add pre-push, post-merge & commit-msg hooks ([2174b51](https://github.com/Pkcarreno/create-astro-minimal/commit/2174b51905b8b3d2846a617ea3fc4c7739f9f4fb))
+
+
+### Bug Fixes
+
+* wrong lefthook tag ([777e04f](https://github.com/Pkcarreno/create-astro-minimal/commit/777e04f7d6a0f3857eb8171216161db4e62753e8))
+
 ## 1.1.0 (2026-01-14)
 
 
