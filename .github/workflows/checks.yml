@@ -1,0 +1,28 @@
+name: Checks
+
+on:
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint:
+    name: Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/setup-node-pnpm-install
+
+      - name: Run Lint (PR)
+        if: github.event_name == 'pull_request'
+        uses: mongolyy/reviewdog-action-biome@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          eslint_flags: "src --max-warnings=0"
+
+      - name: Run Lint (Commit)
+        if: github.event_name != 'pull_request'
+        run: pnpm run lint

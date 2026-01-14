@@ -1,0 +1,52 @@
+{
+  "name": "@pkcarreno/create-astro-minimal",
+  "version": "1.0.6",
+  "description": "CLI to deploy new projects based on astro-minimal-template",
+  "private": false,
+  "type": "module",
+  "homepage": "https://github.com/pkcarreno/astro-minimal-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkcarreno/create-astro-minimal.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "create-astro-minimal": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "package.json"
+  ],
+  "scripts": {
+    "lint": "ultracite check",
+    "lint:fix": "ultracite fix",
+    "commitlint": "commitlint",
+    "prepare": "lefthook install"
+  },
+  "keywords": [
+    "astro",
+    "template",
+    "cli",
+    "minimal"
+  ],
+  "author": "Pedro Carreno",
+  "license": "MIT",
+  "packageManager": "pnpm@10.24.0",
+  "dependencies": {
+    "giget": "^2.0.0",
+    "picocolors": "^1.1.1",
+    "replace-in-file": "^8.4.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "lefthook": "^2.0.15",
+    "ultracite": "7.0.11"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "lefthook"
+    ]
+  }
+}
