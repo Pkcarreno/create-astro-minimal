@@ -1,12 +1,31 @@
 pre-commit:
   jobs:
-    - run: pnpm dlx ultracite fix
-      glob: 
+    - run: pnpm dlx ultracite fix {staged_files}
+      glob:
         - "*.js"
         - "*.jsx"
         - "*.ts"
         - "*.tsx"
         - "*.json"
         - "*.jsonc"
-        - "*.css"
       stage_fixed: true
+
+pre-push:
+  jobs:
+    - run: pnpm dlx ultracite check {push_files}
+      glob:
+        - "*.js"
+        - "*.jsx"
+        - "*.ts"
+        - "*.tsx"
+        - "*.json"
+        - "*.jsonc"
+
+post-merge:
+  jobs:
+    - run: pnpm install
+      glob: "pnpm-lock.yml"
+
+commit-msg:
+  jobs:
+    - run: pnpm commitlint --edit {1}
