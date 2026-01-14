@@ -6,5 +6,5 @@ A CLI tool to scaffold minimal projects based on the
 ## usage
 
 ```bash
-pnpm dlx @pkcarreno/create-astro-minimal <project-name>
+pnpm dlx @pkcarreno/create-astro-minimal@latest <project-name>
 ```
