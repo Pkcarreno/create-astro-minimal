@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Pkcarreno/create-astro-minimal/compare/v1.2.0...v1.2.1) (2026-01-14)
+
+
+### Bug Fixes
+
+* **readme:** improve usage ([747bddb](https://github.com/Pkcarreno/create-astro-minimal/commit/747bddb03d2dc952c47973ef070006e03b941d35))
+
 ## [1.2.0](https://github.com/Pkcarreno/create-astro-minimal/compare/v1.1.0...v1.2.0) (2026-01-14)
 
 
